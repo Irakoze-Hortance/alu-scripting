@@ -4,8 +4,8 @@ import requests
 
 
 def top_ten(subreddit):
-    """Return 10 hot posts for a given subreddit.
-    If the subreddit is invalid or there are no posts, print None."""
+    """Return 10 hot posts for given subreddit.
+    if not return 0."""
 
     headers = {'User-Agent': 'MyAPI/0.0.1'}
     subreddit_url = f"https://www.reddit.com/r/{subreddit}/hot.json?limit=10"
