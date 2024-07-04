@@ -4,12 +4,11 @@ import requests
 
 
 def top_ten(subreddit):
-    """Return 10 hot posts for given subbreddit.
+    """Return number of subscribers if @subreddit is valid subreddit.
     if not return 0."""
 
     headers = {'User-Agent': 'MyAPI/0.0.1'}
-    subreddit_url =f"https://www.reddit.com/r/{subreddit}/hot.json?limit=10"
-
+    subreddit_url = "https://reddit.com/r/{}.json".format(subreddit)
     response = requests.get(subreddit_url, headers=headers)
 
     if response.status_code == 200:
